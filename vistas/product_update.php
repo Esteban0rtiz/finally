@@ -1,6 +1,6 @@
 <h1 class=" has-text-centered" ><img src="./img/inam.png" alt=""  width="200"></h1>
-<h1 class="title has-text-centered">BIENES</h1>
-	<h2 class="subtitle has-text-centered">ACTUALIZAR BIENES</h2>
+<h1 class="title has-text-centered">PRODUCTOS</h1>
+	<h2 class="subtitle has-text-centered">ACTUALIZAR PRODUCTOS</h2>
 
 <div class="container pb-6 pt-6">
 	<?php
@@ -43,84 +43,23 @@
 		
 
 				<div class="control" style="margin: 10px;">
-					<label>Código Bien</label>
-				  	<input class="input custom-input" type="text" name="producto_codigoB" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required value="<?php echo $datos['producto_codigoB']; ?>" >
+					<label>Código </label>
+				  	<input class="input custom-input" type="text" name="producto_codigo" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required value="<?php echo $datos['producto_codigo']; ?>" >
 				</div>
 
 				<div class="control" style="margin: 10px;">
-					<label>Código Anterior</label>
-				  	<input class="input custom-input" type="text" name="producto_codigoA" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required value="<?php echo $datos['producto_codigoA']; ?>" >
-				</div>
-
-				<div class="control" style="margin: 10px;">
-					<label>Código Provisional</label>
-				  	<input class="input custom-input" type="text" name="producto_codigoP" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required value="<?php echo $datos['producto_codigoP']; ?>" >
-				</div>
-		 
-		    	<div class="control" style="margin: 10px;">
-					<label>Nombre</label>
+					<label>NOMBRE </label>
 				  	<input class="input custom-input" type="text" name="producto_nombre" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required value="<?php echo $datos['producto_nombre']; ?>" >
 				</div>
 
 				<div class="control" style="margin: 10px;">
-					<label>Serie</label>
-				  	<input class="input custom-input" type="text" name="producto_serie" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required value="<?php echo $datos['producto_serie']; ?>" >
+					<label>PRECIO</label>
+				  	<input class="input custom-input" type="text" name="producto_precio" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required value="<?php echo $datos['producto_precio']; ?>" >
 				</div>
-
-				<div class="control" style="margin: 10px;">
-					<label>Modelo</label>
-				  	<input class="input custom-input" type="text" name="producto_modelo" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required value="<?php echo $datos['producto_modelo']; ?>" >
-				</div>
-
-				<div class="control" style="margin: 10px;">
-					<label>Marca</label>
+		 
+		    	<div class="control" style="margin: 10px;">
+					<label>MARCA</label>
 				  	<input class="input custom-input" type="text" name="producto_marca" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required value="<?php echo $datos['producto_marca']; ?>" >
-				</div>
-
-				<div class="control" style="margin: 10px;">
-					<label>Color</label>
-				  	<input class="input custom-input" type="text" name="producto_color" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required value="<?php echo $datos['producto_color']; ?>" >
-				</div>
-
-				<div class="control" style="margin: 10px;">
-					<label>Material</label>
-				  	<input class="input custom-input" type="text" name="producto_material" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required value="<?php echo $datos['producto_material']; ?>" >
-				</div>
-
-				<div class="control" style="margin: 10px;">
-					<label>Estado</label>
-				  	<input class="input custom-input" type="text" name="producto_estado" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required value="<?php echo $datos['producto_estado']; ?>" >
-				</div>
-
-				<div class="control" style="margin: 10px;">
-					<label>Ubicacion</label>
-				  	<input class="input custom-input" type="text" name="producto_ubicacion" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required value="<?php echo $datos['producto_ubicacion']; ?>" >
-				</div>
-
-				<div class="control" style="margin: 10px;">
-					<label>Cedula Custodio</label>
-				  	<input class="input custom-input" type="text" name="producto_cedulaC" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required value="<?php echo $datos['producto_cedulaC']; ?>" >
-				</div>
-
-				<div class="control" style="margin: 10px;">
-					<label>Custodio Anterior</label>
-				  	<input class="input custom-input" type="text" name="producto_custodioAn" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required value="<?php echo $datos['producto_custodioAn']; ?>" >
-				</div>
-
-
-				<div class="control" style="margin: 10px;">
-					<label>Custodio Actual</label>
-				  	<input class="input custom-input" type="text" name="producto_custodioA" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required value="<?php echo $datos['producto_custodioA']; ?>" >
-				</div>
-
-				<div class="control" style="margin: 10px;"> 
-					<label>Proxima Custodia</label>
-				  	<input class="input custom-input" type="text" name="producto_proximaC" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required value="<?php echo $datos['producto_proximaC']; ?>" >
-				</div>
-
-				<div class="control" style="margin: 10px;">
-					<label>Observaciones</label>
-				  	<input class="input custom-input" type="text" name="producto_observaciones" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required value="<?php echo $datos['producto_observaciones']; ?>" >
 				</div>
 
 				<div class="column" style="margin: 10px;">

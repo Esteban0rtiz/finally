@@ -4,30 +4,6 @@
     /*== Almacenando datos ==*/
     $ubicacion = limpiar_cadena($_POST['categoria_ubicacion']);
 
-    /*== Verificando campos obligatorios ==
-    if($ubicacion==""){
-        echo '
-            <div class="notification is-danger is-light">
-                <strong>¡Ocurrió un error inesperado!</strong><br>
-                No has llenado todos los campos que son obligatorios
-            </div>
-        ';
-        exit();
-    }*/
-
-    /*== Verificando integridad de los datos ==
-    if($ubicacion!=""){
-        if(verificar_datos("[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{5,150}",$ubicacion)){
-            echo '
-                <div class="notification is-danger is-light">
-                    <strong>¡Ocurrió un error inesperado!</strong><br>
-                    La UBICACION no coincide con el formato solicitado
-                </div>
-            ';
-            exit();
-        }
-    }*/
-
     /*== Guardando datos ==*/
     $guardar_categoria = conexion();
     $guardar_categoria = $guardar_categoria->prepare("INSERT INTO categoria(categoria_ubicacion, categoria_nombre) VALUE(:ubicacion, NULL)");
