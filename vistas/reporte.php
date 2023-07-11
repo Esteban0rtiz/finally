@@ -60,12 +60,12 @@
     $total_productos = mysqli_fetch_assoc($resultado_cantidad)['total_productos'];
 
     echo "<table>";
-    echo "<tr class='header-row'><th>codigo</th><th>nombre</th><th>precio</th><th>marca</th>";
+    echo "<tr class='header-row'><th>CODIGO</th><th>NOMBRE</th><th>PRECIO</th><th>MARCA</th>";
 
     while ($fila = mysqli_fetch_assoc($resultado_productos)) {
         echo "<tr class='data-row'>";
         echo "<td>" . $fila['producto_codigo'] . " </td>";
-        echo "<td>" . $fila['categoria_nombre'] . "</td>";
+        echo "<td>" . $fila['producto_nombre'] . "</td>";
         echo "<td>" . $fila['producto_precio'] . "</td>";
         echo "<td>" . $fila['producto_marca'] . "</td>";
         echo "</tr>";

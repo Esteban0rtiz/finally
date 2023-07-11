@@ -49,9 +49,6 @@
                     <a href="index.php?vista=product_list" class="navbar-item">Lista</a>
                     <a href="index.php?vista=product_category" class="navbar-item">Por categoría</a>
                     <a href="index.php?vista=product_search" class="navbar-item">Buscar</a>
-                    <a href="index.php?vista=cedula_buscar" class="navbar-item">Buscar por Cedula</a>
-                    <a href="index.php?vista=cedula_reporte" class="navbar-item">Reporte por Cedula</a>
-                    <a href="index.php?vista=cedula_reporte2" class="navbar-item">Reporte por Cedula modelo 2</a>
                 </div>
             </div>
 

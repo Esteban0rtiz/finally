@@ -57,6 +57,25 @@
     button[type="submit"]:hover {
       background-color: #45a049;
     }
+
+    .back-button-container {
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        .back-button {
+            padding: 6px 12px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            background-color: #45a049;
+        }
   </style>
 </head>
 <body>
