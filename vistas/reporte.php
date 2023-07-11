@@ -16,15 +16,15 @@
     }
 
     th {
-        background-color: #b3c6ff;
+        background-color: #ffffcc;
     }
 
     td {
-        background-color: #f9f9f9;
+        background-color: #e6f0ff;
     }
 
     td.highlight {
-        background-color: #e6f3ff;
+        background-color: #d9e6ff;
     }
 
     .total-row {
@@ -33,11 +33,11 @@
 
     /* Colores personalizados */
     .header-row th {
-        background-color: #FFFF00;
+        background-color: #ffffaa;
     }
 
     .data-row td {
-        background-color: #a9c9ff; 
+        background-color: #c6d6ff; 
     }
 
     .total-row td {
@@ -81,6 +81,3 @@
     ?>
 </body>
 </html>
-
-
-

@@ -69,7 +69,7 @@
     						if($categorias->rowCount()>0){
     							$categorias=$categorias->fetchAll();
     							foreach($categorias as $row){
-    								echo '<option value="'.$row['categoria_id'].'" >'.$row['categoria_nombre'].'</option>';
+    								echo '<option value="'.$row['categoria_id'].'" >'.$row['categoria_ubicacion'].'</option>';
 				    			}
 				   			}
 				   			$categorias=null;
