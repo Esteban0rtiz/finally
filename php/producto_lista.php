@@ -2,9 +2,7 @@
 	$inicio = ($pagina>0) ? (($pagina * $registros)-$registros) : 0;
 	$tabla="";
 
-	$campos="producto.producto_id,producto.producto_codigoB, producto.producto_codigoA, producto.producto_codigoP, producto.producto_nombre, producto.producto_serie, 
-	producto.producto_modelo, producto.producto_marca, producto.producto_color, producto.producto_material, producto.producto_estado,
-	producto.producto_ubicacion, producto.producto_cedulaC, producto.producto_custodioAn, producto.producto_custodioA, producto.producto_proximaC, producto.producto_observaciones,
+	$campos="producto.producto_id,producto.producto_codigo,producto.producto_nombre,producto.producto_precio, producto.producto_marca,
 	producto.producto_foto,producto.categoria_id,producto.usuario_id,categoria.categoria_id,categoria.categoria_nombre,usuario.usuario_id,usuario.usuario_nombre,usuario.usuario_apellido";
 
 	if(isset($busqueda) && $busqueda!=""){
@@ -56,9 +54,10 @@
 			            <div class="content">
 			              <p>
 			                <strong>'.$contador.' - '.$rows['producto_nombre'].'</strong><br>
-			                <strong>CODIGO BIEN:</strong> $'.$rows['producto_codigoB'].', <strong>CODIGO ANTERIOR:</strong> $'.$rows['producto_codigoA'].', <strong>CODIGO PROVISIONAL:</strong> $'.$rows['producto_codigoP'].', <strong>SERIE:</strong> $'.$rows['producto_serie'].', <strong>MODELO:</strong> $'.$rows['producto_modelo'].',
-							<strong>MARCA:</strong> $'.$rows['producto_marca'].', <strong>COLOR:</strong> $'.$rows['producto_color'].', <strong>MATERIAL:</strong> $'.$rows['producto_material'].', <strong>ESTADO:</strong> $'.$rows['producto_estado'].', <strong>UBICACION:</strong> $'.$rows['producto_ubicacion'].',
-							<strong>CEDULA CUSTODIO:</strong> $'.$rows['producto_cedulaC'].', <strong>CUSTODIO ANTERIOR:</strong> $'.$rows['producto_custodioAn'].', <strong>CUSTODIO ACTUAL:</strong> $'.$rows['producto_custodioA'].', <strong>PROXIMA CUSTODIA:</strong> $'.$rows['producto_proximaC'].', <strong>OBSERVACIONES:</strong> $'.$rows['producto_observaciones'].',   <strong>CATEGORIA:</strong> '.$rows['categoria_nombre'].', <strong>REGISTRADO POR:</strong> '.$rows['usuario_nombre'].' '.$rows['usuario_apellido'].'
+			                <strong>CODIGO:</strong> $'.$rows['producto_codigo'].', 
+							<strong>PRECIO:</strong> $'.$rows['producto_precio'].', 
+							<strong>MARCA:</strong> $'.$rows['producto_marca'].', 
+							<strong>CATEGORIA:</strong> '.$rows['categoria_nombre'].', <strong>REGISTRADO POR:</strong> '.$rows['usuario_nombre'].' '.$rows['usuario_apellido'].'
 			              </p>
 			            </div>
 			            <div class="has-text-right">
