@@ -24,30 +24,15 @@
 
 
     /*== Almacenando datos ==*/
-    $codigoB=limpiar_cadena($_POST['producto_codigoB']);
-	$codigoA=limpiar_cadena($_POST['producto_codigoA']);
-    $codigoP=limpiar_cadena($_POST['producto_codigoP']);
+    $codigo=limpiar_cadena($_POST['producto_codigo']);
 	$nombre=limpiar_cadena($_POST['producto_nombre']);
-	$serie=limpiar_cadena($_POST['producto_serie']);
-	$modelo=limpiar_cadena($_POST['producto_modelo']);
-    $marca=limpiar_cadena($_POST['producto_marca']);
-    $color=limpiar_cadena($_POST['producto_color']);
-    $material=limpiar_cadena($_POST['producto_material']);
-    $estado=limpiar_cadena($_POST['producto_estado']);
-    $ubicacion=limpiar_cadena($_POST['producto_ubicacion']);
-    $cedulaC=limpiar_cadena($_POST['producto_cedulaC']);
-    $custodioAn=limpiar_cadena($_POST['producto_custodioAn']);
-    $custodioA=limpiar_cadena($_POST['producto_custodioA']);
-    $proximaC=limpiar_cadena($_POST['producto_proximaC']);
-    $observaciones=limpiar_cadena($_POST['producto_observaciones']);
+    $precio=limpiar_cadena($_POST['producto_precio']);
+	$marca=limpiar_cadena($_POST['producto_marca']);
 	$categoria=limpiar_cadena($_POST['producto_categoria']);
 
 
 	/*== Verificando campos obligatorios ==*/
-    if($codigoB=="" || $codigoA=="" || $codigoP=="" || $nombre=="" || $serie=="" 
-    || $modelo=="" || $marca=="" || $color=="" || $material=="" 
-    || $estado=="" || $ubicacion=="" || $cedulaC=="" || $custodioAn=="" || $custodioA=="" || $proximaC==""
-    || $observaciones=="" || $categoria==""){
+    if($codigo=="" || $nombre=="" || $precio=="" || $marca=="" || $categoria=="" ){
         echo '
             <div class="notification is-danger is-light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
@@ -260,29 +245,15 @@
 
     /*== Actualizando datos ==*/
     $actualizar_producto=conexion();
-    $actualizar_producto=$actualizar_producto->prepare("UPDATE producto SET producto_codigoB=:codigoB,
-    producto_codigoA=:codigoA,producto_codigoP=:codigoP,producto_nombre=:nombre,producto_serie=:serie,producto_modelo=:modelo,producto_marca=:marca
-    ,producto_color=:color,producto_material=:material,producto_estado=:estado,producto_ubicacion=:ubicacion,producto_cedulaC=:cedulaC,producto_custodioAn=:custodioAn,producto_custodioA=:custodioA
-    ,producto_proximaC=:proximaC,producto_observaciones=:observaciones,categoria_id=:categoria WHERE producto_id=:id");
+    $actualizar_producto=$actualizar_producto->prepare("UPDATE producto SET producto_codigo=:codigo,
+    producto_nombre=:nombre,producto_precio=:precio,producto_marca=:marca,categoria_id=:categoria WHERE producto_id=:id");
 
     $marcadores=[
       
-        ":codigoB"=>$codigoB,
-        ":codigoA"=>$codigoA,
-        ":codigoP"=>$codigoP,
+        ":codigo"=>$codigo,
         ":nombre"=>$nombre,
-        ":serie"=>$serie,
-        ":modelo"=>$modelo,
+        ":precio"=>$precio,
         ":marca"=>$marca,
-        ":color"=>$color,
-        ":material"=>$material,
-        ":estado"=>$estado,
-        ":ubicacion"=>$ubicacion,
-        ":cedulaC"=>$cedulaC,
-        ":custodioAn"=>$custodioAn,
-        ":custodioA"=>$custodioA,
-        ":proximaC"=>$proximaC,
-        ":observaciones"=>$observaciones,
         ":categoria"=>$categoria,
         ":id"=>$id
     ];

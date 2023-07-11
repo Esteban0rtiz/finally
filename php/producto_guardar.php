@@ -4,39 +4,14 @@
 	require_once "main.php";
 
 	/*== Almacenando datos ==*/
-	#$codigo=limpiar_cadena($_POST['producto_codigo']);
-	#$nombre=limpiar_cadena($_POST['producto_nombre']);
-
-	#$precio=limpiar_cadena($_POST['producto_precio']);
-	#$stock=limpiar_cadena($_POST['producto_stock']);
-  #  $codigo=limpiar_cadena($_POST['producto_codigo']);
-    $codigoB=limpiar_cadena($_POST['producto_codigoB']);
-	$codigoA=limpiar_cadena($_POST['producto_codigoA']);
-    $codigoP=limpiar_cadena($_POST['producto_codigoP']);
-
+    $codigo=limpiar_cadena($_POST['producto_codigo']);
 	$nombre=limpiar_cadena($_POST['producto_nombre']);
-	$serie=limpiar_cadena($_POST['producto_serie']);
-	$modelo=limpiar_cadena($_POST['producto_modelo']);
-    $marca=limpiar_cadena($_POST['producto_marca']);
-    $color=limpiar_cadena($_POST['producto_color']);
-    $material=limpiar_cadena($_POST['producto_material']);
-    $estado=limpiar_cadena($_POST['producto_estado']);
-    $ubicacion=limpiar_cadena($_POST['producto_ubicacion']);
-    $cedulaC=limpiar_cadena($_POST['producto_cedulaC']);
-    $custodioAn=limpiar_cadena($_POST['producto_custodioAn']);
-    $custodioA=limpiar_cadena($_POST['producto_custodioA']);
-    $proximaC=limpiar_cadena($_POST['producto_proximaC']);
-    $observaciones=limpiar_cadena($_POST['producto_observaciones']);
-
-
+    $precio=limpiar_cadena($_POST['producto_precio']);
+    $marca=limpiar_cadena($_POST['producto_marca']);   
 	$categoria=limpiar_cadena($_POST['producto_categoria']);
 
-
 	/*== Verificando campos obligatorios ==*/
-    if( $nombre=="" || $serie=="" 
-    || $modelo=="" || $marca=="" || $color=="" || $material=="" 
-    || $estado=="" || $ubicacion=="" || $cedulaC=="" || $custodioAn==""  || $custodioA=="" || $proximaC==""
-    || $observaciones=="" || $categoria==""){
+    if( $codigo=="" || $nombre=="" || $precio=="" || $marca=="" || $categoria==""){
         echo '
             <div class="notification is-danger is-light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
@@ -392,30 +367,15 @@
 
 	/*== Guardando datos ==*/
     $guardar_producto=conexion();
-    $guardar_producto=$guardar_producto->prepare("INSERT INTO producto(producto_codigoB,producto_codigoA,
-    producto_codigoP,producto_nombre,producto_serie,producto_modelo,producto_marca,producto_color,
-    producto_material,producto_estado,producto_ubicacion,producto_cedulaC,producto_custodioAn,producto_custodioA,
-    producto_proximaC,producto_observaciones,producto_foto,categoria_id,usuario_id) VALUES(:codigoB,:codigoA,:codigoP,:nombre,:serie,
-    :modelo,:marca,:color,:material,:estado,:ubicacion,:cedulaC,:custodioAn,:custodioA,:proximaC,:observaciones,:foto,:categoria,:usuario)");
+    $guardar_producto=$guardar_producto->prepare("INSERT INTO producto(producto_codigo,producto_nombre,
+    producto_precio,producto_marca,producto_foto,categoria_id,usuario_id) VALUES(:codigo,:nombre,:precio,:marca,:foto,:categoria,:usuario)");
 
     $marcadores=[
      
-        ":codigoB"=>$codigoB,
-        ":codigoA"=>$codigoA,
-        ":codigoP"=>$codigoP,
+        ":codigo"=>$codigo,
         ":nombre"=>$nombre,
-        ":serie"=>$serie,
-        ":modelo"=>$modelo,
+        ":precio"=>$precio,
         ":marca"=>$marca,
-        ":color"=>$color,
-        ":material"=>$material,
-        ":estado"=>$estado,
-        ":ubicacion"=>$ubicacion,
-        ":cedulaC"=>$cedulaC,
-        ":custodioAn"=>$custodioAn,
-        ":custodioA"=>$custodioA,
-        ":proximaC"=>$proximaC,
-        ":observaciones"=>$observaciones,
         ":foto"=>$foto,
         ":categoria"=>$categoria,
         ":usuario"=>$_SESSION['id']
