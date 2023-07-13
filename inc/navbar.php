@@ -7,7 +7,7 @@
 
     <div class="navbar-brand">
         <a class="navbar-item" href="index.php?vista=home">
-        <img src="./img/inam.png" width="100" height="70">
+        <img src="https://logos.flamingtext.com/Name-Logos/Tuti-design-china-name.png" width="100" height="70">
         </a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

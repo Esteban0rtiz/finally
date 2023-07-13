@@ -1,7 +1,7 @@
 <div class="main-container">
 
 	<form class="box login" action="" method="POST" autocomplete="off">
-	<h5 class="title is-5 has-text-centered is-uppercase">Sistema de inventario <br> <br> <img src="https://www.gob.ec/sites/default/files/styles/medium/public/2018-09/Logo%20nuevo%20inamhi.png?itok=oeU1iIlk" alt=""></h5>
+	<h5 class="title is-5 has-text-centered is-uppercase">Sistema de inventario <br> <br> <img src="https://logos.flamingtext.com/Name-Logos/Tuti-design-china-name.png" alt=""></h5>
 
 		<div class="field">
 			<label class="label">Usuario</label>

@@ -1,4 +1,4 @@
-<h1 class=" has-text-centered" ><img src="./img/inam.png" alt=""  width="200"></h1>
+<h1 class=" has-text-centered" ><img src="https://logos.flamingtext.com/Name-Logos/Tuti-design-china-name.png" alt=""  width="200"></h1>
 <h1 class="title has-text-centered">CATEGORIAS</h1>
 	<h2 class="subtitle has-text-centered">ACTUALIZAR CATEGORIA</h2>
 
