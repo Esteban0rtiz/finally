@@ -51,7 +51,7 @@
     <?php
 
     
-    $conexion = mysqli_connect("localhost", "root", "liga2016", "tuti");
+    $conexion = mysqli_connect("localhost", "root", "liga2012", "tuti");
     $consulta_productos = "SELECT * FROM producto INNER JOIN categoria ON producto.categoria_id = categoria.categoria_id";
     $consulta_cantidad = "SELECT COUNT(*) AS total_productos FROM producto";
     $resultado_productos = mysqli_query($conexion, $consulta_productos);
